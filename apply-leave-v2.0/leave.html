@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- For Icons-->
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/jquery.datetimepicker.min.css" />
+
+     <title>Manager View</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-custom navbar-mainbg">
+      <a class="navbar-brand navbar-logo" href="#">
+        <img src="images/lti.svg" alt="LTI logo" width="10%" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars text-white"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <div class="hori-selector">
+            <div class="left"></div>
+            <div class="right"></div>
+          </div>
+          <li class="nav-item active">
+            <a class="nav-link" href="javascript:void(0);"
+              ><i class="fa-sharp fa-solid fa-chart-line"></i>Dashboard</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0);"
+              ><i class="fa-solid fa-message"></i>Leave Requests</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../login/index.html"
+              ><i class="fa-solid fa-right-from-bracket"></i>Log out</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section id="contact">
+        <div class="container-lg">
+          
+          <div class="mb-4 mt-3 text-center">
+            <h1>Leave Apply</h1>
+          </div>
+          <div class="row justify-content-center my-5">
+            <div class="col-lg-6">
+              
+              <form>
+                <label for="startdate" class="form-label">Start Date</label>
+                <div class="input-group mb-4">
+                  <span class="input-group-text">
+                    <i class="fa fa-calendar" aria-hidden="true" style="color:black"></i>
+                  </span>
+                  <input type="text" id="startdate" class="form-control" />
+                </div>
+                <label for="enddate" class="form-label">End Date</label>
+                <div class="mb-4 input-group">
+                  <span class="input-group-text">
+                    <i class="fa fa-calendar" aria-hidden="true" style="color:black"></i>
+                  </span>
+                  <input type="text" id="enddate" class="form-control" />
+                </div>
+                <label for="leave-type">Leave Type</label>
+                <div class="mb-4 input-group">
+                 
+                      <select name="leave-type" id="leave-type" class="form-control" title="Please select a Leave Type" required>
+                          <option></option>
+                          <option>Sick Leave</option>
+                          <option>Casual Leave</option>
+                          <option>EBL</option>
+                          <option>Unpaid Leave</option>
+                          <option>Hourly Leave</option>
+                      </select>
+                </div>
+                <div class="mb-4 mt-3 form-floating">
+                  <label>Reason</label>
+                  <textarea class="form-control" id="reason" name="reason"></textarea>
+                </div>
+                <div class="mb-4 text-center">
+                  <button type="submit" class="btn btn-primary pmd-ripple-effect pmd-btn-raised" name="applyleave" value="Apply Leave">Apply Leave</button> <a href="loggedin/" class="btn btn-outline-secondary pmd-ripple-effect">Cancel</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Calendar -->
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/jquery.datetimepicker.full.min.js"></script>
+<script>
+  $('#startdate').datetimepicker({
+    timepicker:false,
+    datepicker:true,
+    format: 'd-m-Y',
+  });
+  $('#enddate').datetimepicker({
+    timepicker:false,
+    datepicker:true,
+    format: 'd-m-Y',
+  });
+</script>
+</body>
+</html>
