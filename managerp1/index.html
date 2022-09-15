@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <!-- For Icons-->
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Manager Vieww</title>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-custom navbar-mainbg">
+      <a class="navbar-brand navbar-logo" href="#">
+        <img src="images/lti.svg" alt="LTI logo" width="10%">
+      </a>
+      <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <div class="hori-selector">
+            <div class="left"></div>
+            <div class="right"></div>
+          </div>
+          <li class="nav-item active">
+            <a class="nav-link" href="#"><i class="fa-sharp fa-solid fa-chart-line" style="color:#5161ce ;"></i>Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-solid fa-message" style="color:#5161ce ;"></i>Leave Requests</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-solid fa-people-group" style="color:#5161ce ;"></i>Team Structure</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../login/index.html"><i class="fa-solid fa-right-from-bracket"></i>Log out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div id="container">
+            <div id="header">
+              <div id="monthDisplay"></div>
+              <div>
+                <button id="backButton"><i class="fa-solid fa-backward"></i></button>
+                <button id="nextButton"><i class="fa-solid fa-forward"></i></button>
+              </div>
+            </div>
+      
+            <div id="weekdays">
+              <div>Sunday</div>
+              <div>Monday</div>
+              <div>Tuesday</div>
+              <div>Wednesday</div>
+              <div>Thursday</div>
+              <div>Friday</div>
+              <div>Saturday</div>
+            </div>
+      
+            <div id="calendar"></div>
+          </div>
+      
+          <div id="newEventModal">
+            <h2>New Event</h2>
+      
+            <input id="eventTitleInput" placeholder="Event Title" />
+      
+            <button id="saveButton">Save</button>
+            <button id="cancelButton">Cancel</button>
+          </div>
+      
+          <div id="deleteEventModal">
+            <h2>Event</h2>
+      
+            <p id="eventText"></p>
+      
+            <button id="deleteButton">Delete</button>
+            <button id="closeButton">Close</button>
+          </div>
+      
+          <div id="modalBackDrop"></div>
+          
+
+        </div>
+        <div class="col">
+          <div class="drop">
+            <div class="drop__container">
+              <header>
+                <h1>Leave for {date}</h1>
+              </header>
+              <div class="drop__list" id="drop-items">
+                <div class="drop__card">
+                  <div class="drop__data">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="" class="drop__img">
+                    <div>
+                      <h1 class="drop__name">Farid Vatani</h1>
+                      <span class="drop__profession">Front-End Developer</span>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="drop__card">
+                  <div class="drop__data">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=046c29138c1335ef8edee7daf521ba50" alt="" class="drop__img">
+                    <div>
+                      <h1 class="drop__name">Sara Mill</h1>
+                      <span class="drop__profession">UI/UX Designer</span>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="drop__card">
+                  <div class="drop__data">
+                    <img src="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ" alt="" class="drop__img">
+                    <div>
+                      <h1 class="drop__name">Lily Ford</h1>
+                      <span class="drop__profession">Back-End Developer</span>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="drop__card">
+                  <div class="drop__data">
+                    <img src="https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg" alt="" class="drop__img">
+                    <div>
+                      <h1 class="drop__name">Dean Lit</h1>
+                      <span class="drop__profession">Digital marketer</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+      <script src="js/script.js"></script>    
+  
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
