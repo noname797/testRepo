@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+  
+    <link href='fullcalendar/packages/core/main.css' rel='stylesheet' />
+    <link href='fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
+    
+    
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+     <title></title>
+     
+    <title>Calendar #9</title>
+  </head>
+  <body>
+    <header class="header">
+    <nav class="navbar navbar-style">
+      <!-- <div class="container">
+
+  
+      </div> -->
+       <!-- <div class="container">
+        <div class="navbar-header"> -->
+          
+           
+              
+              <a href=""><img class="logo" src="logo.png" ></a>
+             
+            <!-- </div> -->
+               
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a  href="#">create absence</a></li>
+                  <li><a  href="#">Request Report</a></li>
+                  <li><a  href="#">Signout</a></li>
+                  </ul>
+        
+                  </div>
+       
+                 
+       </div>
+    </nav>
+
+        <div class="content">
+          <div class="row">
+                <div class="col-sm-8 banner info">
+                   
+                <div id='calendar'></div>
+        
+                    <script src="js/jquery-3.3.1.min.js"></script>
+                    <script src="js/popper.min.js"></script>
+                    <script src="js/bootstrap.min.js"></script>
+
+                    <script src='fullcalendar/packages/core/main.js'></script>
+                    <script src='fullcalendar/packages/interaction/main.js'></script>
+                    <script src='fullcalendar/packages/daygrid/main.js'></script>
+
+                    <script>
+                      document.addEventListener('DOMContentLoaded', function() {
+                    var calendarEl = document.getElementById('calendar');
+
+                    var calendar = new FullCalendar.Calendar(calendarEl, {
+                      plugins: [ 'interaction', 'dayGrid' ],
+                      defaultDate: '2020-02-12',
+                      editable: true,
+                      eventLimit: true, // allow "more" link when too many events
+                      events: [
+                        {
+                          title: 'All Day Event',
+                          start: '2020-02-01'
+                        },
+                        {
+                          title: 'Long Event',
+                          start: '2020-02-07',
+                          end: '2020-02-10'
+                        },
+                        {
+                          groupId: 999,
+                          title: 'Repeating Event',
+                          start: '2020-02-09T16:00:00'
+                        },
+                        {
+                          groupId: 999,
+                          title: 'Repeating Event',
+                          start: '2020-02-16T16:00:00'
+                        },
+                        {
+                          title: 'Conference',
+                          start: '2020-02-11',
+                          end: '2020-02-13'
+                        },
+                        {
+                          title: 'Meeting',
+                          start: '2020-02-12T10:30:00',
+                          end: '2020-02-12T12:30:00'
+                        },
+                        {
+                          title: 'Lunch',
+                          start: '2020-02-12T12:00:00'
+                        },
+                        {
+                          title: 'Meeting',
+                          start: '2020-02-12T14:30:00'
+                        },
+                        {
+                          title: 'Happy Hour',
+                          start: '2020-02-12T17:30:00'
+                        },
+                        {
+                          title: 'Dinner',
+                          start: '2020-02-12T20:00:00'
+                        },
+                        {
+                          title: 'Birthday Party',
+                          start: '2020-02-13T07:00:00'
+                        },
+                        {
+                          title: 'Click for Google',
+                          url: 'http://google.com/',
+                          start: '2020-02-28'
+                        }
+                      ]
+                    });
+
+                     calendar.render();
+                  });
+
+                    </script>
+
+                    <script src="js/main.js"></script>
+                    <a class="btn btn-first" href="#">holiday</a>
+                    <a class="btn btn-first" href="#">working day</a>
+                    <a class="btn btn-first" href="#">non-working day</a>
+                    <a class="btn btn-first" href="#">approved</a>
+                    <a class="btn btn-first" href="#">pending</a>
+          </div>
+                        <div class="col-sm-4 banner-info">
+                          <!-- <div class="col"> -->
+                            <div class="card" data-state="#about">
+                              <div class="card-header">
+                                
+                                <h1 class="card-fullname">Not Sarvesh</h1>
+                                <h2 class="card-jobtitle">questionable</h2>
+                              </div>
+                              <div class="card-main">
+                                <div class="card-section" id="about">
+                                  <div class="card-content">
+                                    <div class="card-subtitle">ABOUT</div>
+                                    <p class="card-desc">Loren Ipsum</p>
+                                  </div>
+                                </div>
+                              </div>
+                            <!-- <li class="btn2 btn2-second">EmpName</li>
+                            <li class="btn2 btn2-second">leave balance</li>
+                            <li class="btn2 btn2-second">leave</li>
+                          </div> -->
+          </div>
+        </div>
+                  
+                  
+                  
+            
+            
+    </header>
+  </body>
+</html>
