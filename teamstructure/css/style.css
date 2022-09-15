@@ -1,5 +1,5 @@
-/* Fontss */
-@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+ @import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500|Jost:400,500,600&display=swap");
 
 body {
@@ -26,6 +26,9 @@ i {
 	padding: 0;
 }
 
+.active{
+	color: #5161ce;	
+}
 
 
 
@@ -56,6 +59,11 @@ i {
 	list-style-type: none;
 	float: left;
 }
+
+.active{
+	color: #5161ce !important; 
+}
+
 #navbarSupportedContent ul li a {
 	color: rgba(255, 255, 255, 0.5);
 	text-decoration: none;
@@ -187,197 +195,77 @@ i {
 		bottom: -25px;
 		left: -25px;
 	}
-}
-/* 
-Calendar CSS */
+} */
 
 
-@media (min-width: 990px) {
-	.day {
-		width: 12%;
-		height: 5rem;
-		padding: 10px;
-		cursor: pointer;
-		box-sizing: border-box;
-		background-color: white;
-		margin: 5px;
-		box-shadow: 0px 0px 3px #CBD4C2;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-	  }
-}
-
-
-
-@media (max-width: 990px) {
-	.day {
-		width: 11.7%;
-		height: 3rem;
-		padding: 10px;
-		cursor: pointer;
-		box-sizing: border-box;
-		background-color: white;
-		margin: 5px;
-		box-shadow: 0px 0px 3px #CBD4C2;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-	  }
-} 
-#backButton {
-	width: 40%;
-	cursor: pointer;
-	box-shadow: 0px 0px 2px gray;
-	border: none;
-	outline: none;
-	padding: 5px;
-	border-radius: 5px;
-	color: white;
-  }
-#nextButton {
-	width: 40%;
-	cursor: pointer;
-	box-shadow: 0px 0px 2px gray;
-	border: none;
-	outline: none;
-	padding: 5px;
-	border-radius: 5px;
-	color: white;
-  }
+ 
+ body {
+   background: #eee;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: #000;
+   display: flex;
+   justify-content: center;
+   align-items: center;  
+   min-height: 100vh;
+ }
+ .container{
+   width: 70%;
+   height: 50%;
+ 
+   padding: 10px 40px;
+ }
+ .container .swiper-container{
+   width: 90%;
+   height: 50%;
+ }
+ .container .swiper-slide {
+   position: relative;
+   text-align: center;
+   font-size: 18px;
+   background: #fff;
+   border-radius: 15px;
+   text-align: start;
+   box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.25);
   
-  #header {
-	padding: 3% 0;
-	color: #5161ce;
-	font-size: 26px;
-	font-family: sans-serif;
+ }
+ .container .swiper-slide img{
+	display: block;
+	 width: 100%;
+	 height: 170px;
+	 object-fit: cover;
+	 border-top-left-radius: 15px;
+	 border-top-right-radius: 15px;
+ 
+ }
+ .container .swiper-slide .card-description{
+	 padding:1rem 1rem;
+ }
+ .container .swiper-slide .card-title,.container .swiper-slide .card-text{
+	margin-bottom: .5rem;
+ }
+ .container .swiper-slide .card-link{
+	text-align: center;
+   
+ }
+ .container .swiper-slide .card-link a{
+	 text-decoration: none;
+	 color: #1d6ce2;
+ }
+ .swiper-button-next{
+	 right: 26px !important;
+ }
+ .swiper-button-prev{
+	 left: 26px !important;
+ }
+ 
+ #addMember{
 	display: flex;
-	justify-content: space-between;
-  }
-  #header button {
-	background-color:#92a1d1;
-  }
-  #container {
-	width: 100%;
-  }
-  #weekdays {
-	width:100%;
-	padding-left:2% ;
-	display: flex;
-	color: #247BA0;
-  }
-  #weekdays div {
-	width: 100%;
-	padding: 0.5%;
-  }
-  #calendar {
-	width: 100%;
-	margin: auto;
-	display: flex;
-	flex-wrap: wrap;
-  }
+	
+   border: 1px solid blueviolet;
+   color: white;
+   background-color: blueviolet;
+   width: 10%;
 
-  .day:hover {
-	background-color: #e8faed;
-  }
-  
-  .day + #currentDay {
-	background-color:#e8f4fa;
-  }
-  .event {
-	display: none;
-	font-size: 10px;
-	padding: 3px;
-	background-color: #58bae4;
-	color: white;
-	border-radius: 5px;
-	max-height: 55px;
-	overflow: hidden;
-  }
-  .padding {
-	cursor: default !important;
-	background-color: #FFFCFF !important;
-	box-shadow: none !important;
-  }
-
-
-
-/* Leave UI */
-  
-header {
-display: grid;
-justify-items: center;
-align-items: center;
-}
-  
-h1 {
-margin: 0;
-}
-
-a {
-text-decoration: none;
-}
-
-img {
-max-width: 100%;
-height: auto;
-}
-  
-.drop {
-margin-top: 15%;
-display: grid;
-align-items: center;
-justify-content: center;
-}
-
-.drop__container{
-	display: grid;
-	row-gap: 1rem;
-	padding: 1.5rem;
-	box-shadow: 4px 4px 16px #e1e1e1;
-	border-radius: 1rem;
-
-}
-
-.drop__list{
-	display: grid;
-	row-gap: 1rem;
-}
-
-.drop__card,.drop__data{
-	display: flex;
-	align-items: center;
-
-}
-
-.drop__card{
-	width: 360px;
-	justify-content: space-between;
-	padding: 0.75rem 1.25rem 0.75rem 0.75rem;
-	background-color: #f8f8fc;
-	box-shadow: 4px 4px 16px #e1e1e1, -2px -2px 16px #fff;
-	border-radius: 1rem;
-}
-
-.drop__img{
-	width: 55px;
-	height: 55px;
-	border-radius: 1rem;
-	margin-right: 1rem;
-}
-
-.drop__name{
-	font-size: 1rem;
-	color: #272a3a;
-	font-weight: 500;
-
-}
-
-.drop__profession{
-	font-size: 0.813rem;
-	color: #8a8eaa;
-}
-
-
-
-  
+   border-radius: 5px;
+ 
+ }
